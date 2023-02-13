@@ -1,0 +1,273 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+@mixin flex {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+}
+// section 1 scss
+.nav {
+	color: blue;
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	background-color: rgb(124, 4, 124, 0.4);
+	height: 15vh;
+	padding: 1.5rem 1rem;
+	align-items: center;
+
+	h1 {
+		text-transform: uppercase;
+		text-align: center;
+		max-width: fit-content;
+		margin: auto;
+		font-size: 4vw;
+		// color: gold;
+	}
+
+	.themes {
+		padding: 2vw;
+		outline: none;
+		border: none;
+		border-radius: 7px;
+		box-shadow: -2px 2px 0px gray;
+		label {
+			font-size: 3.5vw;
+			font-weight: bold;
+			color: green;
+		}
+		select {
+			outline: none;
+			border: none;
+			background-color: green;
+			option {
+				background-color: inherit;
+			}
+		}
+		// &:hover{
+		//     background-color: black;
+		//     color: white;
+		//    }
+	}
+}
+
+// end of section 1
+
+// section 2
+.search {
+	width: 70%;
+	margin: auto;
+	border: 1px solid red;
+	margin-top: 2rem;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	padding: 2vw;
+	overflow: hidden;
+
+	input {
+		max-width: max-content;
+		height: 6vh;
+		outline: none;
+		border: none;
+		border-color: white;
+		font-size: 2vw;
+	}
+
+	label {
+		font-size: 2vw;
+		text-transform: uppercase;
+		background-color: rgb(132, 8, 132, 0.7);
+		margin-left: 2rem;
+		border-radius: 9px;
+		box-shadow: -2px 2px 0px gray;
+		padding: 2vw;
+		&:hover {
+			background-color: rgb(250, 0, 0, 0.4);
+			color: white;
+		}
+	}
+}
+// end of section 2 scss
+
+// section 3
+.tasks {
+	border: 2px double red;
+	width: 80%;
+	margin: auto;
+	margin-top: 3vh;
+	padding: 2vw;
+
+	h1 {
+		text-align: center;
+		font-size: 1.8vw;
+		font-weight: bold;
+	}
+
+	ol {
+		margin-top: 1.7rem;
+		padding: 1rem;
+		list-style-type: none;
+
+		li {
+			display: flex;
+			align-content: center;
+			justify-content: space-between;
+			background-color: rgb(132, 6, 132, 0.3);
+			margin: 0.5rem 0rem;
+			padding: 3vw;
+			span {
+				font-size: 2.2vw;
+			}
+
+			&:hover {
+				background-color: rgb(9, 9, 238, 0.5);
+				color: white;
+			}
+
+			.delete {
+				background-color: rgb(132, 8, 132, 0.7);
+				padding: 2vw;
+				border-radius: 5px;
+				box-shadow: -2px 2px 0px gray;
+
+				&:hover {
+					background-color: rgb(250, 0, 0, 0.4);
+					color: white;
+				}
+			}
+			.date {
+				font-size: 1vw;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+// end of section 3
+
+// section 4
+.addTask {
+	width: 70%;
+	margin: auto;
+	margin-top: 2rem;
+	border: 1px solid red;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+
+	input {
+		width: 50%;
+		border: none;
+		outline: none;
+		height: 6vh;
+		padding: 0.5rem 3rem;
+		font-size: 1.5vw;
+	}
+
+	label {
+		background-color: rgb(132, 8, 132, 0.7);
+		padding: 2vw;
+		margin-left: 4vw;
+		font-size: 3vw;
+		text-transform: capitalize;
+		box-shadow: -2px 2px 0px gray;
+
+		&:hover {
+			background-color: rgb(250, 0, 0, 0.4);
+			color: white;
+		}
+	}
+}
+// end of section 4
+
+// * styles to add with js
+.dark {
+	background-color: black;
+	color: white;
+}
+.blue {
+	background-color: blue;
+	color: white;
+}
+.brown {
+	background-color: brown;
+	color: white;
+}
+.white {
+	background-color: white;
+	color: black;
+}
+
+.diag {
+	position: fixed;
+	top: 30%;
+	left: -60%;
+	background-color: darkcyan;
+	color: purple;
+	padding: 1.2rem;
+	width: 40%;
+	// margin: 1rem 5%;
+	box-shadow: 4px 4px 20px black;
+	border-radius: 12px;
+	.heading {
+		@include flex();
+		margin: 0.8rem 5% 2rem 5%;
+		border-bottom: 1px solid gold;
+		h1 {
+			flex-grow: 0.7;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 2vw;
+			color: crimson;
+		}
+		button {
+			outline: none;
+			border: none;
+			border-radius: 12px;
+			box-shadow: 4px 4px 20px black;
+			padding: 0.5rem;
+			font-size: 1.7vw;
+			background-color: gray;
+			margin-bottom: 0.7rem;
+			&:hover {
+				background-color: crimson;
+				color: white;
+			}
+		}
+	}
+	.message {
+		text-align: center;
+		h3 {
+			color: black;
+		}
+		.btn {
+			button {
+				outline: none;
+				border: none;
+				padding: 0.5rem;
+				margin-top: 1rem;
+				background-color: silver;
+				border-radius: 8px;
+				// display: none;
+			}
+		}
+		.true {
+			&:hover {
+				background-color: red;
+				color: white;
+			}
+		}
+		.false {
+			&:hover {
+				background-color: green;
+				color: white;
+			}
+		}
+	}
+}

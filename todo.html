@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todo List</title>
+		<link rel="stylesheet" href="./todo.css" />
+	</head>
+	<body class="body">
+		<!-- section 1 -->
+		<div class="nav">
+			<h1>Todo List</h1>
+			<!-- <button>Dark Theme</button> -->
+			<div class="themes">
+				<label for="themes">Themes</label> 
+				<select class="button">
+					<option value="dark">Dark</option>
+					<option value="white" selected>White</option>
+					<option value="blue">Blue</option>
+					<option value="brown">Brown</option>
+				</select>
+			</div>
+		</div>
+		<!-- end of section 1 -->
+		<div class="container">
+			<!-- section 2 -->
+			<div class="search">
+				<input type="text" placeholder=" Search Todos" />
+				<label for="">search </label>
+			</div>
+			<!-- end of section 2 -->
+			<!--  section 3 -->
+			<div class="tasks">
+				<h1>Tasks <span class="count"></span> 
+					<button class="delMarked">Delete Marked</button> </h1>
+				<ol> 
+					<li id="L1">
+						<span class="task">
+							<input type="checkbox">
+							<span class="text">
+								Javacript Lectures  
+							</span>
+						</span>
+						<span>
+							<span class="date">22:13:09 / Tue Nov 08 2022</span>
+							<span class="delete"> Delete</span>
+						</span>
+					</li>
+					<li id="L2">
+						<span class="task"> 
+							<input type="checkbox">
+							<span class="text">
+								Do Assignmet
+							</span>
+							</span>
+							 	<span>
+								 <span class="date">22:15:15 / Tue Nov 08 2022</span>
+								 <span class="delete"> Delete</span>
+								</span>
+					</li>
+					<li id="L3">
+						<span class="task"> 
+							<input type="checkbox">
+							<span class="text">
+								Take W3shools Javascript Tutorial
+							</span>
+						</span>
+							<span>
+								<span class="date">22:17:12 / Tue Nov 08 2022</span>
+								<span class="delete"> Delete</span>
+							</span>
+					</li>
+				</ol>
+			</div>
+			<!-- end of section 3 -->
+
+			<!--section 4  -->
+			<form class="addTask">
+				<input type="text" placeholder=" Add a Tasks" />
+				<label for="">add task </label>
+			</form>
+			<!-- end of section 4 -->
+		</div>
+
+		<div class="diag">
+				<div class="heading">
+					<h1></h1>
+					<button>close</button>
+				</div>
+				<div class="message">
+					<h3>  </h3> <div class="btn">
+						<button class="true"> OK </button>
+						<button class="false"> Cancel </button>
+					</div>
+				</div>
+
+		</div>
+
+		<script src="./todo.js"></script>
+	</body>
+</html>
